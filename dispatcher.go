@@ -297,7 +297,7 @@ func mqttDiscoverZone(zi int, zn string, tu uint8) {
 	climateTemplate := `{
 	"name": "%[1]s",
 	"modes": [ "off", "cool", "heat", "auto" ],
-	"fan_modes": [ "high", "med", "low", "auto" ],
+	"fan_modes": [ "high", "medium", "low", "auto" ],
 	"preset_modes": [ "hold", "vacation" ],
 	"current_humidity_topic": "%[4]s/zone/%[2]d/humidity",
 	"current_temperature_topic": "%[4]s/zone/%[2]d/currentTemp",
