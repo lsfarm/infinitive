@@ -24,7 +24,7 @@ type discoveryTopicSensor struct {
 	Avail	    string    `json:"availability_topic,omitempty"`
 }
 
-/*type discoveryTopicButton struct {
+type discoveryTopicButton struct {
 	Topic       string    `json:"command_topic"`
 	Name        string    `json:"name"`
 	Payload_Press string  `json:"payload_press,omitempty"`
@@ -32,7 +32,7 @@ type discoveryTopicSensor struct {
 	Retain      bool    `json:"retain,omitempty"`
 	Unique_id   string    `json:"unique_id"`
 	Avail	    string    `json:"availability_topic,omitempty"`
-}*\
+}
 
 type EventDispatcher struct {
 	listeners  map[*EventListener]bool
@@ -228,7 +228,7 @@ func mqttOnConnect(cl mqtt.Client) {
 
 	buttons := []discoveryTopicButton {
 		{ "/vacation/hours/set", "Vacation Cancel", "0", 0, false, "hvac-vac-can", a},
-		{ "/vacation/hours/set", "Vacation Add 1 Hour", "+1", 0, false, "hvac-vac-plus1", a},
+		/*{ "/vacation/hours/set", "Vacation Add 1 Hour", "+1", 0, false, "hvac-vac-plus1", a},
 		{ "/vacation/hours/set", "Vacation Subtract 1 Hour", "-1", 0, false, "hvac-vac-minus1", a},
 		{ "/vacation/hours/set", "Vacation 1 Hour", "1", 0, false, "hvac-vac-1hr", a},
 		{ "/vacation/hours/set", "Vacation 2 Hours", "2", 0, false, "hvac-vac-2hr", a},
@@ -244,7 +244,7 @@ func mqttOnConnect(cl mqtt.Client) {
 		{ "/vacation/days/set", "Vacation 4 Days", "4", 0, false, "hvac-vac-4d", a},
 		{ "/vacation/days/set", "Vacation 5 Days", "5", 0, false, "hvac-vac-5d", a},
 		{ "/vacation/days/set", "Vacation 6 Days", "6", 0, false, "hvac-vac-6d", a},
-		{ "/vacation/days/set", "Vacation 7 Days", "7", 0, false, "hvac-vac-7d", a},
+		{ "/vacation/days/set", "Vacation 7 Days", "7", 0, false, "hvac-vac-7d", a},*\
 	}
 
 	// write discovery topics for HA sensors
@@ -264,7 +264,7 @@ func mqttOnConnect(cl mqtt.Client) {
 	}
 
 	// write discovery topics for HA buttons
-	/*for _, v := range buttons {
+	for _, v := range buttons {
 		v.Topic = instanceName + v.Topic
 		if instanceName != "infinitive" {
 			v.Name = strings.Replace(instanceName, "_", " ", -1) + " " + v.Name
@@ -277,7 +277,7 @@ func mqttOnConnect(cl mqtt.Client) {
 		if err == nil {
 			_ = cl.Publish("homeassistant/button/infinitive/" + v.Unique_id + "/config", 0, true, j)
 		}
-	}*/
+	}
 
 	// flush the "zone discovery written" flags
 	mqttZoneFlags = [8]bool{}
