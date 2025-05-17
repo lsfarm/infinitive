@@ -264,7 +264,7 @@ func mqttOnConnect(cl mqtt.Client) {
 	}
 
 	// write discovery topics for HA buttons
-	for _, v := range buttons {
+	/*for _, v := range buttons {
 		v.Topic = instanceName + v.Topic
 		if instanceName != "infinitive" {
 			v.Name = strings.Replace(instanceName, "_", " ", -1) + " " + v.Name
@@ -277,7 +277,7 @@ func mqttOnConnect(cl mqtt.Client) {
 		if err == nil {
 			_ = cl.Publish("homeassistant/button/infinitive/" + v.Unique_id + "/config", 0, true, j)
 		}
-	}
+	}*/
 
 	// flush the "zone discovery written" flags
 	mqttZoneFlags = [8]bool{}
