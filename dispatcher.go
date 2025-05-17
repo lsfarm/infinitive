@@ -24,7 +24,7 @@ type discoveryTopicSensor struct {
 	Avail	    string    `json:"availability_topic,omitempty"`
 }
 
-type discoveryTopicButton struct {
+/*type discoveryTopicButton struct {
 	Topic       string    `json:"command_topic"`
 	Name        string    `json:"name"`
 	Payload_Press string  `json:"payload_press,omitempty"`
@@ -32,7 +32,7 @@ type discoveryTopicButton struct {
 	Retain      bool    `json:"retain,omitempty"`
 	Unique_id   string    `json:"unique_id"`
 	Avail	    string    `json:"availability_topic,omitempty"`
-}
+}*\
 
 type EventDispatcher struct {
 	listeners  map[*EventListener]bool
