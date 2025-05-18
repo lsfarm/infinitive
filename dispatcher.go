@@ -211,12 +211,12 @@ func mqttOnConnect(cl mqtt.Client) {
 		{ "/rawMode", "Raw Mode", "", "measurement", "", "hvac-sensors-rawmode", a},
 		{ "/blowerRPM", "Blower RPM", "", "measurement", "RPM", "hvac-sensors-blowerrpm", a},
 		{ "/airflowCFM", "Airflow CFM", "", "measurement", "CFM", "hvac-sensors-aflo", a},
-		{ "/staticPressure", "Static Pressure", "distance", "measurement", "in", "hvac-sensors-ahsp", a},
+		//{ "/staticPressure", "Static Pressure", "distance", "measurement", "in", "hvac-sensors-ahsp", a},
 		{ "/coolStage", "Cool Stage", "", "measurement", "", "hvac-sensors-acstage", a},
 		{ "/heatStage", "Heat Stage", "", "measurement", "", "hvac-sensors-heatstage", a},
 		{ "/action", "Action", "enum", "", "", "hvac-sensors-actn", a},
-		/*
 		{ "/vacation/active", "Vacation Mode Active", "enum", "", "", "hvac-sensors-vacay-active", a},  // maybe should be a binary_sensor
+		/*
 		{ "/vacation/days", "Vacation Mode Days Remaining", "duration", "measurement", "d", "hvac-sensors-vacay-days", a},
 		{ "/vacation/hours", "Vacation Mode Hours Remaining", "duration", "measurement", "h", "hvac-sensors-vacay-hours", a},
 		{ "/vacation/minTemp", "Vacation Mode Minimum Temperature", "temperature", "measurement", "°F", "hvac-sensors-vacay-mint", a},
@@ -322,8 +322,8 @@ func mqttDiscoverZone(zi int, zn string, tu uint8) {
 
 	// per-zone "bonus" sensors (outside of the Climate platform model)
 	sensors := []discoveryTopicSensor {
-		{ "%[4]s/zone/%[2]d/damperPos", "%[1]s Damper Postion", "", "measurement", "%", "hvac-sensors-z%[2]d-dpos", a},
-		{ "%[4]s/zone/%[2]d/flowWeight", "%[1]s Airflow Weight", "", "measurement", "", "hvac-sensors-z%[2]d-fwgt", a},
+		//{ "%[4]s/zone/%[2]d/damperPos", "%[1]s Damper Postion", "", "measurement", "%", "hvac-sensors-z%[2]d-dpos", a},
+		//{ "%[4]s/zone/%[2]d/flowWeight", "%[1]s Airflow Weight", "", "measurement", "", "hvac-sensors-z%[2]d-fwgt", a},
 		{ "%[4]s/zone/%[2]d/overrideDurationMins", "%[1]s Override Duration", "duration", "measurement", "min", "hvac-sensors-z%[2]d-odur", a},
 	}
 	tempu := "F"
