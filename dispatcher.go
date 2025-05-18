@@ -215,7 +215,7 @@ func mqttOnConnect(cl mqtt.Client) {
 		{ "/coolStage", "Cool Stage", "", "measurement", "", "hvac-sensors-acstage", a},
 		{ "/heatStage", "Heat Stage", "", "measurement", "", "hvac-sensors-heatstage", a},
 		{ "/action", "Action", "enum", "", "", "hvac-sensors-actn", a},
-
+		/*
 		{ "/vacation/active", "Vacation Mode Active", "enum", "", "", "hvac-sensors-vacay-active", a},  // maybe should be a binary_sensor
 		{ "/vacation/days", "Vacation Mode Days Remaining", "duration", "measurement", "d", "hvac-sensors-vacay-days", a},
 		{ "/vacation/hours", "Vacation Mode Hours Remaining", "duration", "measurement", "h", "hvac-sensors-vacay-hours", a},
@@ -223,7 +223,7 @@ func mqttOnConnect(cl mqtt.Client) {
 		{ "/vacation/maxTemp", "Vacation Mode Maximum Temperature", "temperature", "measurement", "°F", "hvac-sensors-vacay-maxt", a},
 		{ "/vacation/minHumidity", "Vacation Mode Minimum Humidity", "humidity", "measurement", "%", "hvac-sensors-vacay-minh", a},
 		{ "/vacation/maxHumidity", "Vacation Mode Maximum Humidity", "humidity", "measurement", "%", "hvac-sensors-vacay-maxh", a},
-		{ "/vacation/fanMode", "Vacation Mode Fan Mode", "enum", "", "", "hvac-sensors-vacay-fm", a},
+		{ "/vacation/fanMode", "Vacation Mode Fan Mode", "enum", "", "", "hvac-sensors-vacay-fm", a}, */
 	}
 
 	buttons := []discoveryTopicButton {
@@ -244,7 +244,7 @@ func mqttOnConnect(cl mqtt.Client) {
 		{ "/vacation/days/set", "Vacation 4 Days", "4", 0, false, "hvac-vac-4d", a},
 		{ "/vacation/days/set", "Vacation 5 Days", "5", 0, false, "hvac-vac-5d", a},
 		{ "/vacation/days/set", "Vacation 6 Days", "6", 0, false, "hvac-vac-6d", a},
-		{ "/vacation/days/set", "Vacation 7 Days", "7", 0, false, "hvac-vac-7d", a},*\
+		{ "/vacation/days/set", "Vacation 7 Days", "7", 0, false, "hvac-vac-7d", a},*/
 	}
 
 	// write discovery topics for HA sensors
